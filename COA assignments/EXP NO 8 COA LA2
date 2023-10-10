@@ -1,0 +1,12 @@
+;subtraction of two 8-bit numbers
+MVI C,00
+LDA 1100
+MOV B,A
+LDA 1101
+SUB B
+JNC skip
+INR C
+skip: STA 1102
+MOV A,C
+STA 1103
+HLT        

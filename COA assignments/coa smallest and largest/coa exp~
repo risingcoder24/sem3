@@ -1,0 +1,14 @@
+;largest of n numbers
+LXI H,1100
+MOV C,M
+INX H
+DCR C
+MOV A,M
+loop: INX H
+CMP M
+JNC skip
+MOV A,M
+skip: DCR C
+JNZ loop
+STA 1109
+HLT
